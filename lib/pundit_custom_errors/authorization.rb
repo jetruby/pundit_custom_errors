@@ -26,10 +26,12 @@ module PunditCustomErrors
       message ||= translate_error_message_for_query(query, policy)
       message ||= "not allowed to #{query} this #{record}"
 
-      error = Pundit::NotAuthorizedError.new(message)
-
-      error.query, error.record, error.policy = query, record, policy
-      error
+      Pundit::NotAuthorizedError.new(
+        message: message,
+        query: query,
+        record: record,
+        policy: policy
+      )
     end
 
     def translate_error_message_for_query(query, policy)
