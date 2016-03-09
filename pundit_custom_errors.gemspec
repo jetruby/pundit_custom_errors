@@ -25,5 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'pry', '~> 0.10', '>= 0.10.1'
   spec.add_development_dependency 'rubocop', '~> 0.28', '>= 0.28.0'
   spec.add_development_dependency 'codeclimate-test-reporter', '~> 0.4'
-  spec.add_dependency 'pundit', '~> 0.3', '>= 0.3.0'
+  spec.add_dependency 'pundit', '~> 1.1.0', '>= 1.1.0'
 end
